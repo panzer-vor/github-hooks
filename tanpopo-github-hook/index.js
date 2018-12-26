@@ -30,15 +30,11 @@ function rumCommand( cmd, args, cwd, callback ) {
 }
 
 function init() {
-  rumCommand('sh', ['./update.sh'], './' ,function( result ) { // 清理缓存
+  rumCommand('sh', ['./update-dev.sh'], './' ,function( result ) {
     console.log(result)
   })
 
-  // rumCommand('sh', ['../server/autoServer.sh'], '../server' ,function( result ) { // cLient端更新
-  //   console.log(result)
-  // })
-  
-  // rumCommand('sh', ['../client/autoClient.sh'], '../client' ,function( result ) { // server端更新
-  //   console.log(result)
-  // })
+  rumCommand('sh', ['./update-master.sh'], './' ,function( result ) {
+    console.log(result)
+  })
 }
