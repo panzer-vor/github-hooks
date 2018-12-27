@@ -29,6 +29,7 @@ function rumCommand( cmd, args, cwd, callback ) {
 }
 
 function init() {
+  console.log('starting shell command')
   rumCommand('sh', ['./update-dev.sh'], './' ,function( result ) {
     console.log(result)
   })
