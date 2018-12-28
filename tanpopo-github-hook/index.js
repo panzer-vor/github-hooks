@@ -15,9 +15,11 @@ handler.on('error', function (err) {
 
 // 监听 push 事件
 handler.on('push', function (event) {
-  console.log('Received a push event for %s to %s',
-    event.payload.repository.name,
-    event.payload.ref)
+    console.log('Received a push event for %s to %s',
+      event.payload.repository.name,
+      event.payload.ref,
+      `in ${new Date()}`
+    )
     init() // 每次拉取都重新监听
   }
 )   
