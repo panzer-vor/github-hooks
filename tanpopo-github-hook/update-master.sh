@@ -1,4 +1,4 @@
-echo "Start deployment"
+echo "Start"
 cd /var/www/blog/line
 echo "pulling source code..."
 git clean -f
